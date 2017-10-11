@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BMI Calculator</title>
+</head>
+<body>
+<div class="gg">
+</body>
+
+<style>
+.gg {
+   background-image: url("http://ak3.picdn.net/shutterstock/videos/3167173/thumb/1.jpg");
+   height: 50%; 
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+</style>
+
+
+<head>
+<script language="JavaScript">
+
+function calculateBmi() {
+var weight = document.bmiForm.weight.value
+var height = document.bmiForm.height.value
+if(weight > 0 && height > 0){	
+var finalBmi = weight/(height/100*height/100)
+document.bmiForm.bmi.value = finalBmi
+
+if(finalBmi < 16){
+document.bmiForm.meaning.value = "You're grossly undernourished, need hospitalization."
+}
+if(finalBmi >=16 && finalBmi < 18){
+document.bmiForm.meaning.value = "You are starving. Go Find some food!"
+}
+
+if(finalBmi >=18 && finalBmi < 21){
+document.bmiForm.meaning.value = "You are thin, eat more."
+}
+
+ if(finalBmi >=21 && finalBmi < 24){
+document.bmiForm.meaning.value = "I envy you. Keep it up!!"
+}
+ 
+if(finalBmi >=24 && finalBmi < 27){
+document.bmiForm.meaning.value = "You are fat, need dieting and exercise"
+} 
+
+if(finalBmi >=27 && finalBmi <30){
+document.bmiForm.meaning.value = "Umm... You are obese, want some liposuction?"
+} 
+
+if(finalBmi >=30){
+document.bmiForm.meaning.value = "You are grossly obese, consult your physician!"
+}
+}
+else{
+alert("Please Fill in everything correctly")
+}
+}
+
+</script>
+
+</head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+
+<body>
+<!-- Navigation--> 
+<nav class="w3-bar w3-black">
+  <a href="index.html" class="w3-button w3-bar-item">Home</a>
+  <a href="b_about.html" class="w3-button w3-bar-item">What is iBelieve</a>
+  <a href="b_calculate.html" class="w3-button w3-bar-item">Calculate</a>
+  <a href="b_precaution.html" class="w3-button w3-bar-item">Precaution & Treatment</a>
+
+
+</nav><br><br>
+
+<form name="bmiForm">
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; Your Weight(kg): <input type="text" name="weight" size="10"><br /><br>
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Your Height(cm): <input type="text" name="height" size="10"><br /><br><br>
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; <input type="button" value="Calculate BMI" onClick="calculateBmi()"><br /><br><br>
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; Your BMI: <input type="text" name="bmi" size="10"><br /><br>
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; This Means: <input type="text" name="meaning" size="60"><br /><br><br>
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; <input type="reset" value="Reset" /><br><br>
+</form>
+
+<br><br><br><br><br><br><br><br><br><br><br>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-45 w3-center w3-black w3-xlarge">
+  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <p class="w3-medium">
+  Powered by <a href=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ54-GR3Yx_BNHdeaRalm121Cp7aWyqRD6gL9UxoQ4GF8IhVaE7IA" target="_blank">SS</a>
+  </p>
+</footer>
+
+</body>
+ </html>
